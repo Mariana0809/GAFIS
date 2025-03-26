@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Contenedor del formulario */
+  .form-container {
+    position: fixed;
+    top: 0;
+    right: -320px; /* Oculto inicialmente */
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  /* Contenedor que detecta el hover */
+  .form-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+  }
+
+  /* Botón de la flecha */
+  .toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    background: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  /* Mostrar el formulario al pasar el mouse */
+  .form-wrapper:hover .form-container {
+    right: 0;
+  }
+  .form-wrapper {
+    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tooltyp.com%2F8-beneficios-de-usar-imagenes-en-nuestros-sitios-web%2F&psig=AOvVaw38JAb3Vl3moOuJSOvb5bEu&ust=1743098494266000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNj_h4aqqIwDFQAAAAAdAAAAABAE');
+    background-size: cover; /* Ajusta la imagen para cubrir todo */
+    background-position: center; /* Centra la imagen */
+    height: 100vh; /* Ocupa toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajusta el formulario para que tenga un fondo visible */
+.form-container {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}

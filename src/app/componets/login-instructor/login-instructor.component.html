@@ -1,16 +1,40 @@
-<div class="mb-3 row">
-    <div class="col-sm-10 offset-sm-1">
-        <input type="number" class="form-control" id="documentNumber" placeholder="Identificación">
-    </div>
-</div>
+<body>
+  <!-- Contenedor que detecta el hover -->
+  <div class="form-wrapper">
+    <button class="toggle-btn">➡</button>
 
-<div class="mb-3 row">
-    <div class="col-sm-10 offset-sm-1">
-        <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
+    <!-- Formulario -->
+    <div class="form-container">
+      <h2>Login</h2>
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelect">
+          <option value="1">Instructor</option>
+          <option value="2">Administrador</option>
+        </select>
+        <label for="floatingSelect">Tipo de usuario</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Identificación"
+          minlength="7"
+          maxlength="10"
+          required
+        />
+        <label for="floatingInput">Identificación</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Contraseña"
+        />
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+      <button class="btn btn-primary w-100 py-2" type="submit">Iniciar</button>
     </div>
-</div>
-<div class="mb-3 row text-center">
-    <div class="col-sm-10 offset-sm-1">
-        <button type="submit" class="btn btn-primary mb-3">Ingresar</button>
-    </div>
-</div>
+  </div>
+</body>
