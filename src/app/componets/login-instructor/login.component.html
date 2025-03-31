@@ -1,56 +1,66 @@
 <div class="background-container">
-  <img
-    src="/assets/img/ImgLoginInstructor.jpg"
-    alt="Fondo"
-    class="background-image"
-  />
-  <img
-    src="/assets/img/logo_sena_gafis.png"
-    alt="logo_sena_gafis"
-    class="logo-superior-izquierda"
-  />
+  <img src="/assets/img/ImgLoginInstructor.jpg" alt="Fondo" class="background-image" />
+  <img src="/assets/img/logo_sena_gafis.png" alt="logo_sena_gafis" class="logo-superior-izquierda" />
 </div>
 
 <!-- Contenedor que detecta el hover -->
 <div class="form-wrapper">
   <button class="toggle-btn"></button>
 
-  <!-- Formulario -->
+  <!-- Formulario Angular -->
   <div class="form-container">
     <img src="/assets/img/logoGAFIS.png" alt="Fondo" class="logo-gafis" />
 
-    <div class="form-floating mb-3">
-      <select class="form-select" id="floatingSelect">
-        <option value="Instructor">Instructor</option>
-        <option value="Administrador">Administrador</option>
-        <option value="Super Administrador">Super Administrador</option>
-      </select>
-      <label for="floatingSelect">Rol</label>
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        type="text"
-        class="form-control"
-        id="floatingInput"
-        placeholder="Número Documento"
-        minlength="7"
-        maxlength="10"
-        required
-      />
-      <label for="floatingInput">Número Documento</label>
-    </div>
-    <div class="form-floating mb-3">
-      <input
-        type="password"
-        class="form-control"
-        id="floatingPassword"
-        placeholder="Contraseña"
-      />
-      <label for="floatingPassword">Contraseña</label>
-    </div>
-    <div class="form-floating mb-3">
-      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-    </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Iniciar</button>
+    <!-- Vincular con Angular Form -->
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Selección de rol -->
+      <div class="form-floating mb-3">
+        <select class="form-select" id="floatingSelect" formControlName="role">
+          <option value="" disabled selected>Selecciona tu rol</option>
+          <option value="Instructor">Instructor</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Super Administrador">Super Administrador</option>
+        </select>
+        <label for="floatingSelect">Rol</label>
+      </div>
+
+      <!-- Número de documento -->
+      <div class="form-floating mb-3">
+        <input 
+          type="text"
+          class="form-control"
+          id="floatingInput"
+          placeholder="Número Documento"
+          minlength="7"
+          maxlength="10"
+          formControlName="documentNumber"
+          required
+        />
+        <label for="floatingInput">Número Documento</label>
+      </div>
+
+      <!-- Contraseña -->
+      <div class="form-floating mb-3">
+        <input 
+          type="password"
+          class="form-control"
+          id="floatingPassword"
+          placeholder="Contraseña"
+          formControlName="password"
+        />
+        <label for="floatingPassword">Contraseña</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <!-- Botón de inicio de sesión -->
+      <button class="btn btn-primary w-100 py-2" type="submit">
+        Iniciar
+      </button>
+
+    </form>
   </div>
 </div>
