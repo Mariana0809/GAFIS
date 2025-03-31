@@ -1,5 +1,14 @@
 <div class="background-container">
-    <img src="/assets/img/ImgLoginInstructor.jpg" alt="Fondo" class="background-image">
+  <img
+    src="/assets/img/ImgLoginInstructor.jpg"
+    alt="Fondo"
+    class="background-image"
+  />
+  <img
+    src="/assets/img/logo_sena_gafis.png"
+    alt="logo_sena_gafis"
+    class="logo-superior-izquierda"
+  />
 </div>
 
 <!-- Contenedor que detecta el hover -->
@@ -8,11 +17,13 @@
 
   <!-- Formulario -->
   <div class="form-container">
-    <h2>Login</h2>
+    <img src="/assets/img/logoGAFIS.png" alt="Fondo" class="logo-gafis" />
+
     <div class="form-floating mb-3">
       <select class="form-select" id="floatingSelect">
-        <option value="1">Instructor</option>
-        <option value="2">Administrador</option>
+        <option value="Instructor">Instructor</option>
+        <option value="Administrador">Administrador</option>
+        <option value="Super Administrador">Super Administrador</option>
       </select>
       <label for="floatingSelect">Rol</label>
     </div>
@@ -21,12 +32,12 @@
         type="text"
         class="form-control"
         id="floatingInput"
-        placeholder="Identificación"
+        placeholder="Número Documento"
         minlength="7"
         maxlength="10"
         required
       />
-      <label for="floatingInput">Identificación</label>
+      <label for="floatingInput">Número Documento</label>
     </div>
     <div class="form-floating mb-3">
       <input
@@ -36,6 +47,9 @@
         placeholder="Contraseña"
       />
       <label for="floatingPassword">Contraseña</label>
+    </div>
+    <div class="form-floating mb-3">
+      <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Iniciar</button>
   </div>
