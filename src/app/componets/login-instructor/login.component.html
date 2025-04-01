@@ -1,6 +1,14 @@
 <div class="background-container">
-  <img src="/assets/img/ImgLoginInstructor.jpg" alt="Fondo" class="background-image" />
-  <img src="/assets/img/logo_sena_gafis.png" alt="logo_sena_gafis" class="logo-superior-izquierda" />
+  <img
+    src="/assets/img/ImgLoginInstructor.jpg"
+    alt="Fondo"
+    class="background-image"
+  />
+  <img
+    src="/assets/img/logo_sena_gafis.png"
+    alt="logo_sena_gafis"
+    class="logo-superior-izquierda"
+  />
 </div>
 
 <!-- Contenedor que detecta el hover -->
@@ -13,7 +21,6 @@
 
     <!-- Vincular con Angular Form -->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      
       <!-- Selección de rol -->
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect" formControlName="role">
@@ -27,7 +34,7 @@
 
       <!-- Número de documento -->
       <div class="form-floating mb-3">
-        <input 
+        <input
           type="text"
           class="form-control"
           id="floatingInput"
@@ -42,7 +49,7 @@
 
       <!-- Contraseña -->
       <div class="form-floating mb-3">
-        <input 
+        <input
           type="password"
           class="form-control"
           id="floatingPassword"
@@ -57,10 +64,7 @@
       </div>
 
       <!-- Botón de inicio de sesión -->
-      <button class="btn btn-primary w-100 py-2" type="submit">
-        Iniciar
-      </button>
-
+      <button class="btn btn-primary w-100 py-2" type="submit">Iniciar</button>
     </form>
   </div>
 </div>
