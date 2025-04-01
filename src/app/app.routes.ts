@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './componets/login-instructor/login.component';
+import { LoginComponent } from './componets/login/login.component';
 export const routes: Routes = [
     {
         path:'',
@@ -13,6 +13,8 @@ export const routes: Routes = [
         path: 'dashboard', 
         loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
       },
-      { path: '**', redirectTo: '' }
+      { 
+        path: '**', 
+        redirectTo: '' }
 
 ];

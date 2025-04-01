@@ -6,15 +6,15 @@ import { SuperadminDashboardComponent } from './superadmin-dashboard/superadmin-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 
 @NgModule({
-  
+  declarations: [
+   
+  ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    CommonModule,
-    DashboardRoutingModule,
-    InstructorDashboardComponent, 
-    AdminDashboardComponent,      
-    SuperadminDashboardComponent
+    InstructorDashboardComponent,
+    AdminDashboardComponent,
+    SuperadminDashboardComponent,
   ]
 })
-export class DashboardModule { }
+export class DashboardModule {}
