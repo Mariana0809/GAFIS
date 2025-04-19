@@ -1,0 +1,16 @@
+.welcome-container {
+    background: none;
+    padding: 20px;
+    text-align: left;
+    margin-left: 100px;
+  }
+  
+  .welcome-btn {
+    background-color: white;
+    color: #2ecc71;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+  
