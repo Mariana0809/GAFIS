@@ -23,32 +23,45 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
 
-    this.options={
-
-      plugins:[dayGridPlugin,timeGridPlugin,interactionPlugin],
-      defaultDate:new Date(),
+    this.options = {
+      plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+      initialView: 'dayGridMonth',
       locale: esLocale,
-      header:{
-        left:'prev,next',
-        center:'title',
-        rigth: 'dayGridMonth, timeGridweek, timeGridDay'
+      headerToolbar: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
-      editable:false
-    }
+      views: {
+        dayGridMonth: {
+          dayMaxEventRows: true
+        },
+        timeGridWeek: {
+          slotMinTime: '06:00:00',
+          slotMaxTime: '22:00:00'
+        },
+        timeGridDay: {
+          slotMinTime: '06:00:00',
+          slotMaxTime: '22:00:00'
+        }
+      },
+      editable: false
+    };
+    
 
     this.events=[
       {
-        tite: "Evento 1",
+        title: "Evento 1",
         start:new Date(),
         description: "Evento 1"
       },
       {
-        tite: "Evento 2",
+        title: "Evento 2",
         start:new Date(new Date().getTime() + 86400000),
         description: "Evento 2"
       },
       {
-        tite: "Evento 3",
+        title: "Evento 3",
         start:new Date(new Date().getTime() + (86400000*2)),
         end:new Date(new Date().getTime() + (86400000*3)),
         description: "Evento 3"
