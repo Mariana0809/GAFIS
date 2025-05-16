@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from "../../dashboard/admin-dashboard/components/navbar/navbar.component";
+
 
 @Component({
   selector: 'app-background',
-  imports: [NavbarComponent],
+  imports: [],
   templateUrl: './background.component.html',
   styleUrl: './background.component.css'
 })

@@ -1,0 +1,42 @@
+
+  .calendar-container {
+    width: 700px;
+    margin-left: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px; 
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  }
+  /* Reducir tamaño de los textos */
+.fc {
+    font-size: 14px;
+  }
+  
+  /* Reducir altura de las celdas */
+  .fc-daygrid-day-frame {
+    padding: 2px; 
+  }
+  
+  /* Reducir tamaño del encabezado de días */
+  .fc-col-header-cell-cushion {
+    font-size: 11px;
+    padding: 2px;
+  }
+  
+  /* Reducir los botones (prev, next, today) */
+  .fc-button {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+  
+  /* Ajustar los eventos */
+  .fc-event {
+    font-size: 11px;
+    padding: 1px 2px;
+  }
+
+ 
+  

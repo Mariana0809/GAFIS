@@ -28,10 +28,14 @@
               }
             ],
             "styles": [
+              
+             
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+             "node_modules/jquery/dist/jquery.min.js",
+             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+             "node_modules/admin-lte/dist/js/adminlte.min.js"
 
             ],
             "server": "src/main.server.ts",
@@ -95,11 +99,13 @@
               }
              
             ],
-            "styles": [
+            "styles": [           
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/admin-lte/dist/js/adminlte.min.js"
 
             ]
           }

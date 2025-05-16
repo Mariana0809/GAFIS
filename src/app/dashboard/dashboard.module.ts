@@ -7,16 +7,17 @@ import { SuperadminDashboardComponent } from './superadmin-dashboard/superadmin-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { HomeAdminComponent } from './admin-dashboard/components/home-admin/home-admin.component';
 import { AsignacionesComponent } from './admin-dashboard/components/asignaciones/asignaciones.component';
+import { BackgroundComponent } from '../shared/background/background.component';
 
 
 @NgModule({
   declarations: [
-   
   ],
   imports: [
     CommonModule,
     RouterModule,
     DashboardRoutingModule,
+    //componentes
     InstructorDashboardComponent,
     AdminDashboardComponent,
     SuperadminDashboardComponent,

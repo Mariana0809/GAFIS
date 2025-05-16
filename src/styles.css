@@ -1,5 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import 'bootstrap-icons/font/bootstrap-icons.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import 'admin-lte/dist/css/adminlte.min.css';
 
 .layout-con-footer {
     display: flex;
@@ -10,4 +12,10 @@
   .layout-con-footer main {
     flex: 1;
   }
-  
+
+.ng-valid:not(form).ng-touched{
+  border-left: 5px solid #42A948;
+}
+.ng-invalid:not(form).ng-touched{
+  border-left: 5px solid #a9444a;
+}

@@ -20,7 +20,7 @@
     <img src="/assets/img/logoGAFIS.png" alt="Fondo" class="logo-gafis" />
 
     <!-- Vincular con Angular Form -->
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="loginForm">
       <!-- Selección de rol -->
       <div class="form-floating mb-3">
         <select class="form-select" id="floatingSelect" formControlName="role">
@@ -45,8 +45,18 @@
           required
         />
         <label for="floatingInput">Número Documento</label>
+        <div
+          *ngIf="
+            documentNumber.invalid &&
+            (documentNumber.dirty || documentNumber.touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="documentNumber.errors?.['required']">
+            Debe ingresar el documento
+          </div>
+        </div>
       </div>
-
       <!-- Contraseña -->
       <div class="form-floating mb-3">
         <input
@@ -57,6 +67,17 @@
           formControlName="password"
         />
         <label for="floatingPassword">Contraseña</label>
+        <div
+          *ngIf="
+            password.invalid &&
+            (password.dirty || password.touched)
+          "
+          class="text-danger"
+        >
+          <div *ngIf="password.errors?.['required']">
+            Debe ingresar contraseña
+          </div>
+        </div>
       </div>
 
       <div class="form-floating mb-3">
@@ -64,7 +85,13 @@
       </div>
 
       <!-- Botón de inicio de sesión -->
-      <button class="btn btn-primary w-100 py-2" type="submit">Iniciar</button>
+      <button
+        class="btn btn-primary w-100 py-2"
+        type="submit"
+        (click)="onSubmit()"
+      >
+        Iniciar
+      </button>
     </form>
   </div>
 </div>

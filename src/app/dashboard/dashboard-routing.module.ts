@@ -6,6 +6,8 @@ import { SuperadminDashboardComponent } from './superadmin-dashboard/superadmin-
 import { DashboardComponent } from './dashboard/dashboard.component'; 
 import { HomeAdminComponent } from './admin-dashboard/components/home-admin/home-admin.component';
 import { AsignacionesComponent } from './admin-dashboard/components/asignaciones/asignaciones.component';
+import { FormacionesComponent } from './admin-dashboard/components/formaciones/formaciones.component';
+import { InstructoresComponent } from './admin-dashboard/components/instructores/instructores.component';
 const routes: Routes = [
   {
     path: '',
@@ -22,6 +24,8 @@ const routes: Routes = [
           { path: '', redirectTo: 'home', pathMatch: 'full' },
           { path: 'home', component: HomeAdminComponent },
           { path: 'asignaciones', component: AsignacionesComponent },
+          { path: 'formaciones', component: FormacionesComponent },
+          { path: 'instructores', component: InstructoresComponent },
           //{ path: 'formaciones', component: FormacionesComponent },
           //{ path: 'instructores', component: InstructoresComponent }
         ]
