@@ -4,12 +4,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es';
+
 @Component({
   selector: 'app-calendar',
   standalone: true,
-  imports:[
-    FullCalendarModule
-  ],
+  imports: [
+    FullCalendarModule,
+],
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.css'],
   
